@@ -1,0 +1,3 @@
+- [x] Redesign the existing profile into a dark cinematic single-page portfolio using the real identity and current content.
+- [x] Preserve and restyle the in-page career drafting feature without publishing draft changes.
+- [x] Check links, loading behavior, accessibility, and responsive layouts across phone, tablet, and desktop sizes.

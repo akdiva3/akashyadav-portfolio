@@ -1,0 +1,63 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@theme inline {
+  --color-bg: hsl(var(--bg));
+  --color-surface: hsl(var(--surface));
+  --color-elevated: hsl(var(--elevated));
+  --color-primary: hsl(var(--text));
+  --color-muted: hsl(var(--muted));
+  --color-stroke: hsl(var(--stroke));
+  --color-accent-blue: hsl(var(--accent-blue));
+  --color-background: hsl(var(--bg));
+  --color-foreground: hsl(var(--text));
+  --color-card: hsl(var(--surface));
+  --color-card-foreground: hsl(var(--text));
+  --color-popover: hsl(var(--surface));
+  --color-popover-foreground: hsl(var(--text));
+  --color-primary-foreground: hsl(var(--bg));
+  --color-secondary: hsl(var(--elevated));
+  --color-secondary-foreground: hsl(var(--text));
+  --color-muted-foreground: hsl(var(--muted));
+  --color-accent: hsl(var(--elevated));
+  --color-accent-foreground: hsl(var(--text));
+  --color-destructive: hsl(0 70% 57%);
+  --color-destructive-foreground: hsl(var(--text));
+  --color-border: hsl(var(--stroke));
+  --color-input: hsl(var(--stroke));
+  --color-ring: hsl(var(--accent-blue));
+  --font-sans: var(--font-body);
+  --font-display: "Instrument Serif", serif;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: 0 0% 4%;
+  --surface: 0 0% 8%;
+  --elevated: 0 0% 12%;
+  --text: 0 0% 96%;
+  --muted: 0 0% 58%;
+  --stroke: 0 0% 20%;
+  --accent-blue: 211 47% 60%;
+  --font-body: "Inter", sans-serif;
+  --font-display: "Instrument Serif", serif;
+  --shadow: hsl(0 0% 0% / .4);
+}
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; border-color: hsl(var(--stroke)); }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: hsl(var(--bg)); color: hsl(var(--text)); font-family: var(--font-body); }
+  ::selection { background: hsl(var(--accent-blue)); color: hsl(var(--bg)); }
+  :focus-visible { outline: 2px solid hsl(var(--accent-blue)); outline-offset: 4px; }
+}
+@utility bg-gradient-accent { background: linear-gradient(90deg, #89AACC 0%, #4E85BF 100%); }
+@utility text-gradient-accent { background: linear-gradient(90deg, #89AACC 0%, #4E85BF 100%); background-clip: text; color: transparent; }
+@keyframes scroll-down { 0% { transform: translateY(0); opacity: 0; } 35% { opacity: 1; } 100% { transform: translateY(22px); opacity: 0; } }
+.scroll-line::after { content: ""; display: block; width: 1px; height: 22px; background: hsl(var(--text)); animation: scroll-down 2.2s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .portfolio-loader { display: none; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
