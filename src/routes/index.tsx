@@ -59,7 +59,7 @@ function Index() {
     <main>
       <section id="home" className="relative flex min-h-[min(850px,94svh)] flex-col justify-end overflow-hidden border-b border-stroke px-5 pb-20 pt-36 sm:px-8 md:min-h-[min(920px,91svh)] md:px-12 lg:px-20">
         <div className="absolute inset-0 bg-surface" aria-hidden="true" />
-        <img src={portraitAsset.url} alt="" fetchPriority="high" className="absolute inset-y-0 right-0 h-full w-[90%] object-cover object-[center_24%] opacity-55 grayscale-[20%] sm:w-[70%] md:w-[58%] lg:w-[50%]" />
+        <img src={portraitAsset} alt="" fetchPriority="high" className="absolute inset-y-0 right-0 h-full w-[90%] object-cover object-[center_24%] opacity-55 grayscale-[20%] sm:w-[70%] md:w-[58%] lg:w-[50%]" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,hsl(var(--bg))_0%,hsl(var(--bg)/.86)_30%,transparent_85%),linear-gradient(0deg,hsl(var(--bg))_0%,transparent_65%)]" aria-hidden="true" />
         <div className="absolute right-0 top-0 h-full w-px bg-gradient-accent opacity-35" aria-hidden="true" />
         <div ref={heroText} className="relative z-10 mx-auto w-full max-w-[1500px]">
