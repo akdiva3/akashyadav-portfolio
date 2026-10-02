@@ -8,7 +8,7 @@ import { LoadingScreen } from "@/components/LoadingScreen";
 import { Navbar } from "@/components/Navbar";
 import { portfolio } from "@/data/portfolio";
 import type { ProfileDraft } from "@/lib/profile-ai.functions";
-import portraitAsset from "@/assets/akash-yadav-portrait.png.asset.json";
+import portraitAsset from "@/assets/akash-yadav-portrait.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
